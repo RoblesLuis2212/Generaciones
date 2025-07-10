@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,13 +14,203 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <meta name="author" content="Robles Luis" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Generations</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tabla Generaciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container-fluid">
+        <h1 class="text-center mt-2">Tabla de Generaciones</h1>
+        <div class="table table-responsive mt-2">
+          <table class="table">
+            <tr class="cabecera">
+              <th>NOMBRE DE LA GENERACIÓN</th>
+              <th>MARCO TEMPORAL EN ESPAÑA</th>
+              <th>POBLACION DE LAS GENERACIONES</th>
+              <th>CIRCUNSTANCIA HISTORICA</th>
+              <th>RASGO CARACTERISTICO</th>
+            </tr>
+            <tbody>
+              <tr>
+                <th scope="row">Generacion Z</th>
+                <td>1994 - 2010</td>
+                <td>7.800.000</td>
+                <td>Expansion masiva de internet</td>
+                <td>Irreverencia <i class="bi bi-emoji-grin-fill"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">Generacion Y millenials</th>
+                <td>1981 - 1993</td>
+                <td>7.200.000</td>
+                <td>Inicio de la digitalizacion</td>
+                <td>Frustracion <i class="bi bi-emoji-frown"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">Generacion X</th>
+                <td>1969 - 1980</td>
+                <td>9.300.000</td>
+                <td>Crisis del 73 y transicion española</td>
+                <td>
+                  Obsesion por el exito
+                  <i class="bi bi-emoji-sunglasses-fill"></i>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Baby Boom</th>
+                <td>1949 - 1968</td>
+                <td>12.200.000</td>
+                <td>Paz y explosion demografica</td>
+                <td>Ambicion <i class="bi bi-currency-dollar"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Silent Generation <br />Los niños de la posguerra
+                </th>
+                <td>1930 - 1948</td>
+                <td>6.300.000</td>
+                <td>Conflictos belicos</td>
+                <td>
+                  Austeridad <i class="bi bi-emoji-expressionless-fill"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <article class="conteiner-fluid">
+        <h2 class="text-center">Descubre a que generacion perteneces!</h2>
+        <form class="container mb-3">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nombre"
+              minlength="4"
+              maxlength="50"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Edad</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Edad"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">DNI</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Ej: 4866754545"
+              minlength="7"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="sexo" class="form-label">Sexo</label>
+            <select id="disabledSelect" class="form-select">
+              <option>Hombre</option>
+              <option>Mujer</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Peso</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Peso"
+              minlength="2"
+              maxlength="5"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Altura</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Altura"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Fecha De Nacimiento</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              placeholder="Fecha de nacimiento"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Año De Nacimiento</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Año de nacimiento"
+              required
+            />
+          </div>
+          <div class="botones">
+            <button type="submit" class="btn btn-primary">
+              Mostrar Generacion
+            </button>
+            <button type="button" class="btn btn-primary">Mayor de edad</button>
+          </div>
+        </form>
+      </article>
+    </main>
+    <footer class="container-fluid text-center bg-dark-subtle py-4">
+      <p class="mt-2">&copy; Todos los derechos reservados 2025</p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
