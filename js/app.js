@@ -134,6 +134,10 @@ class Persona {
     ) {
       edad -= 1; //Si todavia no cumplio le restamos 1
     }
+    if (this.#edad > edad) {
+      alert("Su edad no coincide con la fecha de nacimiento ingresada");
+      return;
+    }
     //Veficamos si la persona es mayor o menor de edad y retornamos el mensaje
     if (edad >= 18) {
       return alert(`${this.#nombre} es mayor de edad`);
@@ -171,10 +175,15 @@ class Persona {
 //Seleccionamos todos los input del documento
 const input = document.querySelectorAll(".form-control");
 const select = document.querySelector(".form-select"); //Seleccionamos individualmente el select
+const btnGeneracion = document.querySelector(".btn-generacion");
 const btnEdad = document.querySelector(".btnEdad");
 //Seleccionamos el formulario
 const formulario = document.querySelector(".formDatos");
 let objPersona; //Incializamos una clase persona
+
+//Deshabilitamos los botones hasta que se complete el formulario
+btnGeneracion.classList.add("disabled");
+btnEdad.classList.add("disabled");
 
 //Agregamos un evento al formulario
 formulario.addEventListener("submit", (e) => {
@@ -199,7 +208,15 @@ formulario.addEventListener("submit", (e) => {
     yearNacimiento,
     fechaNacimiento
   );
-  //Invocamos al metodo mostrar generacion
+  alert("Datos de la persona cargados correctamente");
+  formulario.reset();
+  //Una vez completado el formulario habilitamos los botones
+  btnGeneracion.classList.remove("disabled");
+  btnEdad.classList.remove("disabled");
+});
+
+//Se agrega el evento al btnGeneracion y llamamos al metodo de la clase utilzando una funcion anonima
+btnGeneracion.addEventListener("click", () => {
   objPersona.mostrarGeneracion();
 });
 
